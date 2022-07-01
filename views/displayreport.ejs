@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>
+            add quiz questions
+        </title>
+        <style>
+            body{
+                background-image: url('/images/back2.jpg');
+            }
+            .box{
+                padding: 40px 56px;
+                background-color: bisque;
+                margin: 100px 100px 20px;
+                border-radius: 20px
+            }
+            .box2{
+                padding: 40px 56px 20px 56px;
+                background-color: bisque;
+                margin: 30px 100px 80px;
+                border-radius: 20px;
+            }
+            .message{
+                display: flex;
+                justify-content: center;
+                font-family: cursive;
+                font-weight: bold;
+                color: green;
+                
+            }
+            .heading{
+                font-size: large;
+                font-family: cursive;
+                font-weight: bold;
+                color: rgb(37, 45, 81);
+            }
+            
+        </style>
+        
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/javascripts/project.js"></script>
+
+    </head>
+    <body>  
+        <div class="maincontainer">
+            <div class="box">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>user id</th>
+                            <th>option selected</th>
+                            <th>calculate Scrore</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.map((item)=>{ %>
+                        <tr>
+                            <td><%=item.userid%></td>
+                            <td><%=item.optionselected%></td>
+                            <% var count=0; if(item.optionselected.includes('1')){count++} if(item.optionselected.includes('2')){count++} if(item.optionselected.includes('3')){count++} if(item.optionselected.includes('4')){count++} %>
+                            <td><%= count %></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</html>

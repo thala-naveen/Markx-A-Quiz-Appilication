@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>
+            add quiz questions
+        </title>
+        <style>
+            body{
+                background-image: url('/images/back2.jpg');
+            }
+            .box{
+                padding: 40px 56px;
+                background-color: bisque;
+                margin: 100px 100px 20px;
+                border-radius: 20px
+            }
+            .box2{
+                padding: 40px 56px 20px 56px;
+                background-color: bisque;
+                margin: 30px 100px 80px;
+                border-radius: 20px;
+            }
+            .message{
+                display: flex;
+                justify-content: center;
+                font-family: cursive;
+                font-weight: bold;
+                color: green;
+                
+            }
+            .heading{
+                font-size: large;
+                font-family: cursive;
+                font-weight: bold;
+                color: rgb(37, 45, 81);
+            }
+            
+        </style>
+        
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/javascripts/project.js"></script>
+
+    </head>
+    <body>  
+        <div class="maincontainer">
+            
+
+            <div class="box">
+                
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">person</i>
+                    <input id="quizid" type="text" class="validate" name="quizid" required>
+                    <label for="quizid">Enter quiz id</label>
+                  </div>
+                </div>
+                
+                <div class="bt" style="display: flex;justify-content: center;align-items: center;margin-top:-11px;padding-bottom:20px">
+                  <button id="btn" class="btn waves-effect waves-light" type="submit" name="action">Search
+                      <i class="material-icons right">send</i>
+                    </button>
+              </div>
+                <hr style="margin-bottom: 20px;">
+                
+                
+                <form action="/users/thankyou" method="post">
+                <div id="id">
+                  <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input id="userid" type="email" class="validate" name="userid" required>
+                  <label for="userid">Enter your mail id</label>
+                </div>
+                </div>
+                <div id="result">
+                  
+                </div>
+                <div style="display: flex;justify-content: center;align-items: center;margin-top:-11px;padding-bottom:20px;padding-top: 20px;">
+                  <button  class="btn waves-effect waves-light" type="submit">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+              </div>
+
+              </form>
+                
+
+                   
+            </div>
+            </div>
+          
+          
+        </div>
+
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</html>

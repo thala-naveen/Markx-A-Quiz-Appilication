@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+    <style>
+      body{
+        background-image: url('/images/quizback2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+      }
+      .formback{
+          width: 348px;
+    
+          background-color: white;
+          border-radius: 10px;
+          margin-left: 200px;
+          margin-top: 100px;
+      }
+      .adjust{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+      .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      .signup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .loginbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p:hover {
+        color: green;
+      }
+      .formback2{
+        width: 348px;
+        
+        border-radius: 10px;
+        margin-left: 200px;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+
+    </style>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+     <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+ 
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div class="formback">
+      <div class="adjust">
+        <div class="icon">
+            <img src="/images/logo.png" alt="" width="150px">
+        </div>
+        <form action="/quiz/checklogin" method="post">
+        
+          <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="adminid" type="email" class="validate" name="adminid" required>
+          <label for="adminid">Enter Email</label>
+        </div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">password</i>
+          <input id="adminpassword" type="password" class="validate" name="adminpassword" required>
+          <label for="adminpassword">Enter password</label>
+        </div>
+        <div class="loginbutton" >
+          <button class="btn waves-effect waves-light" type="submit" name="action" style="background-color:#142e5c;">Admin Login
+            <i class="material-icons right">person</i>
+          </button>
+        </div>
+      </form>
+        <div class="signup">
+            <p style="font-family:cursive;"><a href="/quiz/signup" style="color: black;">Sign Up</a></p>
+        </div>
+        <div class="message" style="color: red;font-size: large;font-weight: bold;padding-top: 10px;display: flex;justify-content: center;align-items: center;">
+            <%=msg%>
+        </div>
+      </div>
+    </div>
+
+    <div class="formback2" >
+      <form action="/users/startquiz">
+      <button  class="btn waves-effect waves-light" type="submit" name="action" style="width: 348px;background-color: #142e5c;border-radius: 20px; height: 50px;">Start Quiz
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+    </div>
+    
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

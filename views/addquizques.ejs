@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>
+            add quiz questions
+        </title>
+        <style>
+            body{
+                background-image: url('/images/back2.jpg');
+            }
+            .box{
+                padding: 40px 56px;
+                background-color: bisque;
+                margin: 100px 100px 20px;
+                border-radius: 20px
+            }
+            .box2{
+                padding: 40px 56px 20px 56px;
+                background-color: bisque;
+                margin: 30px 100px 80px;
+                border-radius: 20px;
+            }
+            .message{
+                display: flex;
+                justify-content: center;
+                font-family: cursive;
+                font-weight: bold;
+                color: green;
+                
+            }
+            
+        </style>
+        
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    </head>
+    <body>  
+        <div class="maincontainer">
+            <form action="/quiz/addquizdetails" method="post">
+
+            <div class="box2">
+                
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="quizid" type="text" class="validate" name="quizid">
+                        <label for="quizid">Enter Your Quiz Id</label>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="input-field col s3">
+                        <input id="adminid" type="email" class="validate" name="adminid">
+                        <label for="adminid">Enter Your Email Id</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="quizname" type="text" class="validate" name="quizname">
+                        <label for="quizname">Enter Your Quiz Name</label>
+                    </div>
+
+                    <div class="col s6" style="padding-top: 30px;padding-left: 20px;">
+                        <div class="col s5" style="padding-left: 50px;justify-content: center;">
+                            <h6 style="font-family: cursive;font-size: medium;font-weight: bold;">set difficulty level:</h4>
+                        </div>
+                        <div class="col s2" style="padding-top: 9px;padding-left: 10px;">
+                            <label>
+                                <input class="with-gap" name="difficulty" type="radio" checked value="Easy"/>
+                                <span>Easy</span>
+                              </label>
+                        </div>
+                        <div class="col s2" style="padding-top: 9px;padding-left: 17px;">
+                            <label>
+                                <input class="with-gap" name="difficulty" type="radio"  value="Medium"/>
+                                <span>Medium</span>
+                              </label>
+                        </div>
+                        <div class="col s1">
+
+                        </div>
+                        <div class="col s2" style="padding-top: 9px;">
+                            <label>
+                                <input class="with-gap" name="difficulty" type="radio"  value="Hard"/>
+                                <span>Hard</span>
+                              </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="ques-name" type="text" class="validate" name="quesname">
+                        <label for="ques-name">Enter Your Question</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="option1" type="text" class="validate" name="optionone">
+                        <label for="option1">Option 1</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="option2" type="text" class="validate" name="optiontwo">
+                        <label for="option2">Option 2</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="option3" type="text" class="validate" name="optionthree">
+                        <label for="option3">Option 3</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="option4" type="text" class="validate" name="optionfour">
+                        <label for="option4">Option 4</label>
+                    </div>
+                </div>
+                
+                <div class="row" >
+                    <div class="input-field col s6" >
+                        <input id="correctoptionnumber" type="number" class="validate" name="correctoptionnumber" pattern="[1-4]" title="Enter option number bw 1 to 4">
+                        <label for="correctoptionnumber">Enter Correct Option number</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="correctoptionvalue" type="text" class="validate" name="correctoptionvalue">
+                        <label for="correctoptionvalue">Enter Correct Option</label>
+                    </div>
+                </div>
+
+                <div class="row" >
+                    <div class="col s6" style="display: flex;justify-content: center;">
+                        <button class="btn waves-effect waves-light" type="reset" name="action">Reset
+                            <i class="material-icons right">create</i>
+                          </button>
+                    </div>
+                    
+                    <div class="col s6" style="display: flex;justify-content: center;">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                          </button>
+                    </div>    
+                </div>
+                <div class="row message">
+                    <%=msg%>
+                </div>
+                
+            </div>
+          </form>
+          
+        </div>
+
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
